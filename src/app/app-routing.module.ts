@@ -2,6 +2,9 @@ import { NgModule } from "@angular/core";
 import {Routes,RouterModule} from '@angular/router';
 import{AppLogin} from './login/login.component';
 import { AppHome } from './home/home.component';
+import { PagesRoutes } from './pages/pages-routing.module';
+
+
 const routes:Routes=[
     {
         path:'login',
@@ -9,7 +12,8 @@ const routes:Routes=[
     },
     {
         path:'',
-        component: AppHome
+        component: AppHome,
+        children: PagesRoutes
     }
 ]
 @NgModule({
